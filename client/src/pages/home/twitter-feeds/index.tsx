@@ -25,7 +25,7 @@ function TwitterFeeds() {
     <Container>
       <div className="heading">
         <h5>WHAT PEOPLE SAY</h5>
-        <Link to={ROUTES.videoGallery.path}>
+        <Link to={ROUTES.socials.path}>
           More <CgArrowLongRight />
         </Link>
       </div>

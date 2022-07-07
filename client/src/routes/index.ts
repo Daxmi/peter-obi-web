@@ -13,9 +13,13 @@ const GenerateAvatar = lazy(() => import("../pages/generate-avatar"));
 const PoNetwork = lazy(() => import("../pages/networks"));
 const PictureGallery = lazy(() => import("../pages/picture-gallery"));
 const VideoGallery = lazy(() => import("../pages/video-gallery"));
+const EachVideo = lazy(() => import("../pages/each-video"));
+const About = lazy(() => import("../pages/about"));
+const Socials = lazy(() => import("../pages/socials"));
+
 
 type RouteType = Record<
-  "home" | "donate" | "generateAvatar" | "networks" | "pictureGallery" | "videoGallery",
+  "home" | "donate" | "generateAvatar" | "networks" | "pictureGallery" | "videoGallery" | "eachVideo" | "about" | "socials",
   {
     path: string;
     exact: boolean;
@@ -32,6 +36,12 @@ const ROUTES: RouteType = {
     private: false,
     element: Home,
     index: true,
+  },
+  about: {
+    path: "/about",
+    exact: true,
+    private: false,
+    element: About,
   },
   donate: {
     path: "/donate",
@@ -63,6 +73,18 @@ const ROUTES: RouteType = {
     private: false,
     element: VideoGallery,
   },
+  eachVideo : {
+    path: "/video-gallery/:id",
+    exact: true,
+    private: false,
+    element: EachVideo
+  },
+  socials : {
+    path: "/socials",
+    exact: true,
+    private: false,
+    element: Socials
+  }
 };
 
 export default ROUTES;

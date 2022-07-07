@@ -26,6 +26,7 @@ function ChooseNetwork() {
       name: "Kaduna",
       link: "http://hjdjsds.com",
     },
+    
   ];
   return (
     <Container>
@@ -33,7 +34,7 @@ function ChooseNetwork() {
       <div className="itemsWrapper">
         {items.map((item, index) => {
           return (
-            <a href={item.link} key={index}>
+            <Link to={item.link} key={index}>
               <img src={item.bg} alt="" />
               <p className="state"> {item.name}</p>
               <div className="details">
@@ -47,12 +48,12 @@ function ChooseNetwork() {
                 </p>
               </div>
               <div className="overlay" />
-            </a>
+            </Link>
           );
         })}
       </div>
 
-      <Link className="viewMore" to={ROUTES.donate.path}>
+      <Link className="viewMore" to={ROUTES.networks.path}>
         VIEW MORE
       </Link>
     </Container>

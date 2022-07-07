@@ -18,6 +18,9 @@ function Header() {
         <Link to={ROUTES.home.path} {...activeName(ROUTES.home.path)}>
           Home
         </Link>
+        <Link to={ROUTES.about.path} {...activeName(ROUTES.about.path)}>
+          About
+        </Link>
         <Link to={ROUTES.donate.path} {...activeName(ROUTES.donate.path)}>
           Donate
         </Link>

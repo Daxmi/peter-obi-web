@@ -1,10 +1,12 @@
 import React from "react";
-import { FaPhone, FaUserAstronaut } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import ROUTES from "../../routes";
+import {
+  AiFillTwitterCircle,
+  AiFillInstagram,
+  AiFillYoutube,
+} from "react-icons/ai";
 import { Container } from "./styles";
 
-function ChooseNetwork() {
+const Socials = () => {
   const items = [
     {
       bg: "/assets/images/labour_party.jpeg",
@@ -23,7 +25,17 @@ function ChooseNetwork() {
     },
     {
       bg: "/assets/images/labour_party.jpeg",
-      name: "Kaduna",
+      name: "Lagos",
+      link: "http://hjdjsds.com",
+    },
+    {
+      bg: "/assets/images/labour_party.jpeg",
+      name: "Enugu",
+      link: "http://hjdjsds.com",
+    },
+    {
+      bg: "/assets/images/labour_party.jpeg",
+      name: "Abuja",
       link: "http://hjdjsds.com",
     },
     {
@@ -43,11 +55,6 @@ function ChooseNetwork() {
     },
     {
       bg: "/assets/images/labour_party.jpeg",
-      name: "Kaduna",
-      link: "http://hjdjsds.com",
-    },
-    {
-      bg: "/assets/images/labour_party.jpeg",
       name: "Lagos",
       link: "http://hjdjsds.com",
     },
@@ -59,40 +66,34 @@ function ChooseNetwork() {
     {
       bg: "/assets/images/labour_party.jpeg",
       name: "Abuja",
-      link: "http://hjdjsds.com",
-    },
-    {
-      bg: "/assets/images/labour_party.jpeg",
-      name: "Kaduna",
       link: "http://hjdjsds.com",
     },
   ];
   return (
     <Container>
-      <h2>PO Support Networks</h2>
+      <h2>Social Feeds</h2>
       <div className="itemsWrapper">
         {items.map((item, index) => {
           return (
-            <Link to={item.link} key={index}>
-              <img src={item.bg} alt="" />
-              <p className="state"> {item.name}</p>
-              <div className="details">
-                <p>
-                  <FaPhone />
-                  &nbsp; 08169981412
+              <a href="https://t.co/8AKl9AxLBm" className="twitter" key={index} target="_blank">
+                <div className="heading">
+                  <p>&mdash; WezeeLee 🈲 (@Zeegrafix2) </p>
+                  <div className="logo">
+                    <AiFillTwitterCircle/>
+                  </div>
+                </div>
+                <p lang="en" dir="ltr">
+                  This is so accurate 🤣🤣🤣 My WhatsApp
+                  <a href="https://t.co/8AKl9AxLBm">
+                    pic.twitter.com/8AKl9AxLBm
+                  </a>
                 </p>
-                <p>
-                  <FaUserAstronaut />
-                  &nbsp; Emeka Abolaji
-                </p>
-              </div>
-              <div className="overlay" />
-            </Link>
+              </a>
           );
-        })}
-      </div>
+        })} 
+    </div>
     </Container>
   );
-}
+};
 
-export default ChooseNetwork;
+export default Socials;

@@ -1,19 +1,15 @@
 import styled from "styled-components";
-import COLORS from "../../../styles/colors";
+import COLORS from "../../styles/colors";
 
 export const Container = styled.div`
-  margin-top: 2rem;
+  margin: 2rem 0;
   text-align: center;
-  h2 {
-    font-size: 5rem;    
-    margin-top: 6rem;
-    line-height: 1;
-    margin-bottom: 2rem;
-  }
+  
   div.itemsWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
     a {
       position: relative;
       display: block;
